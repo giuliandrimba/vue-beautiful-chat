@@ -103,6 +103,10 @@ export default {
     showDeletion: {
       type: Boolean,
       required: true
+    },
+    reply: {
+      type: Number,
+      required: false
     }
   },
   computed: {

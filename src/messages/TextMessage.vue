@@ -19,6 +19,14 @@
             <IconCross />
           </IconBase>
         </button>
+        <button
+          v-if="me && message.id != null && message.id != undefined"
+          @click="reply"
+        >
+          <IconBase :color="messageColors.color" width="10" icon-name="remove">
+            <IconCross />
+          </IconBase>
+        </button>
         <slot name="text-message-toolbox" :message="message" :me="me"> </slot>
       </div>
     </template>
@@ -98,6 +106,9 @@ export default {
   methods: {
     edit() {
       this.store.editMessage = this.message
+    },
+    reply() {
+      this.store.replyMessage = this.message
     }
   }
 }

@@ -1,2 +1,2 @@
 import Vue from 'vue'
-export default Vue.observable({editMessage: null})
+export default Vue.observable({ editMessage: null, replyMessage: null })

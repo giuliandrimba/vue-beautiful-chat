@@ -5,7 +5,6 @@
       :show-close-button="showCloseButton"
       :title="title"
       :image-url="titleImageUrl"
-      :on-close="onClose"
       :colors="colors"
       :disable-user-list-toggle="disableUserListToggle"
       @userList="handleUserListToggle"
@@ -59,6 +58,7 @@
       :colors="colors"
       @onType="$emit('onType')"
       @edit="$emit('edit', $event)"
+      @reply="$emit('reply', $event)"
     />
   </div>
 </template>
@@ -106,10 +106,6 @@ export default {
       default: ''
     },
     onUserInputSubmit: {
-      type: Function,
-      required: true
-    },
-    onClose: {
       type: Function,
       required: true
     },

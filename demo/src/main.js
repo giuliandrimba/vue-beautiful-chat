@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Chat from '../../dist/vue-beautiful-chat.umd.min.js'
+import Chat from '../../src/index'
 import vmodal from 'vue-js-modal'
 
-Vue.use(vmodal , { dialog: true })
+Vue.use(vmodal, { dialog: true })
 Vue.use(Chat)
 
 // eslint-disable-next-line

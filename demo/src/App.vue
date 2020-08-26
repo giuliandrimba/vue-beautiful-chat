@@ -4,7 +4,7 @@
       :chosenColor="chosenColor"
       :colors="colors"
     />
-    <beautiful-chat 
+    <beautiful-chat
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :close="closeChat"
       :colors="colors"
@@ -15,8 +15,8 @@
       :onMessageWasSent="onMessageWasSent"
       :open="openChat"
       :participants="participants"
-      :showCloseButton="true"
-      :showLauncher="true"
+      :showCloseButton="false"
+      :showLauncher="false"
       :showEmoji="true"
       :showFile="true"
       :showTypingIndicator="showTypingIndicator"
@@ -25,6 +25,7 @@
       :titleImageUrl="titleImageUrl"
       @onType="handleOnType"
       @edit="editMessage"
+      @reply="replyMessage"
       @remove="removeMessage"
     >
       <template v-slot:text-message-toolbox="scopedProps">
@@ -32,7 +33,7 @@
           👍
         </button>
       </template>
-      <template v-slot:text-message-body="scopedProps"> 
+      <template v-slot:text-message-body="scopedProps">
         <p class="sc-message--text-content" v-html="scopedProps.messageText"></p>
         <p v-if="scopedProps.message.data.meta" class='sc-message--meta' :style="{color: scopedProps.messageColors.color}">{{scopedProps.message.data.meta}}</p>
         <p v-if="scopedProps.message.isEdited || scopedProps.message.liked" class='sc-message--edited'>
@@ -130,7 +131,7 @@ export default {
         'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
       messageList: messageHistory,
       newMessagesCount: 0,
-      isChatOpen: false,
+      isChatOpen: true,
       showTypingIndicator: '',
       colors: null,
       availableColors,
@@ -190,6 +191,11 @@ export default {
     handleOnType() {
       this.$root.$emit('onType')
       this.userIsTyping = true
+    },
+    replyMessage(message, replyID){
+      console.log("replyMessage");
+      const m = this.messageList.find(m => m.id === message.id);
+      m.reply = replyID;
     },
     editMessage(message){
       const m = this.messageList.find(m => m.id === message.id);

@@ -1,5 +1,9 @@
 <template>
   <div>
+    <ReplyMessage
+      v-if="replyMessage"
+      :message="replyMessage"
+    />
     <Suggestions :suggestions="suggestions" :colors="colors" @sendSuggestion="_submitSuggestion" />
     <div
       v-if="file"
@@ -84,6 +88,7 @@ import EmojiIcon from './icons/EmojiIcon.vue'
 import FileIcons from './icons/FileIcons.vue'
 import UserInputButton from './UserInputButton.vue'
 import Suggestions from './Suggestions.vue'
+import ReplyMessage from './ReplyMessage.vue'
 import FileIcon from './assets/file.svg'
 import CloseIconSvg from './assets/close.svg'
 import store from './store/'
@@ -99,7 +104,8 @@ export default {
     Suggestions,
     IconCross,
     IconOk,
-    IconSend
+    IconSend,
+    ReplyMessage,
   },
   props: {
     icons: {
@@ -140,7 +146,7 @@ export default {
     colors: {
       type: Object,
       required: true
-    }
+    },
   },
   data() {
     return {
@@ -153,9 +159,18 @@ export default {
     editMessageId() {
       return this.isEditing && store.editMessage.id
     },
+    replyMessage() {
+      return store.replyMessage;
+    },
     isEditing() {
       return store.editMessage && store.editMessage.id
-    }
+    },
+    isReplying() {
+      return store.replyMessage && store.replyMessage.id
+    },
+    replyMessageId() {
+      return store.replyMessage ? store.replyMessage.id : null;
+    },
   },
   watch: {
     editMessageId(m) {
@@ -203,7 +218,7 @@ export default {
       })
     },
     _submitSuggestion(suggestion) {
-      this.onSubmit({author: 'me', type: 'text', data: {text: suggestion}})
+      this.onSubmit({author: 'me', type: 'text', data: {text: suggestion}, reply: this.replyMessageId})
     },
     _checkSubmitSuccess(success) {
       if (Promise !== undefined) {
@@ -212,6 +227,7 @@ export default {
             if (wasSuccessful === undefined || wasSuccessful) {
               this.file = null
               this.$refs.userInput.innerHTML = ''
+              store.replyMessage = null;
             }
           }.bind(this)
         )
@@ -231,7 +247,8 @@ export default {
             this.onSubmit({
               author: 'me',
               type: 'text',
-              data: {text}
+              data: {text},
+              reply: this.replyMessageId
             })
           )
         }
@@ -243,7 +260,8 @@ export default {
           this.onSubmit({
             author: 'me',
             type: 'file',
-            data: {text, file}
+            data: {text, file},
+            reply: this.replyMessageId
           })
         )
       } else {
@@ -251,7 +269,8 @@ export default {
           this.onSubmit({
             author: 'me',
             type: 'file',
-            data: {file}
+            data: {file},
+            reply: this.replyMessageId
           })
         )
       }
@@ -263,7 +282,8 @@ export default {
           author: 'me',
           type: 'text',
           id: store.editMessage.id,
-          data: {text}
+          data: {text},
+          reply: this.replyMessageId
         })
         this._editFinish()
       }
@@ -273,7 +293,8 @@ export default {
         this.onSubmit({
           author: 'me',
           type: 'emoji',
-          data: {emoji}
+          data: {emoji},
+          reply: this.replyMessageId
         })
       )
     },

@@ -31,15 +31,15 @@ export default {
     },
     imageUrl: {
       type: String,
-      required: true
+      required: false
     },
     title: {
       type: String,
-      required: true
+      required: false
     },
     onClose: {
       type: Function,
-      required: true
+      required: false
     },
     colors: {
       type: Object,
