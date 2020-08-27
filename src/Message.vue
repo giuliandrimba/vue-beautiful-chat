@@ -1,5 +1,9 @@
 <template>
   <div class="sc-message" :id="message.id">
+    <ReplyMessage
+      v-if="reply"
+      :message="reply"
+    />
     <div
       class="sc-message--content"
       :class="{
@@ -68,6 +72,7 @@ import FileMessage from './messages/FileMessage.vue'
 import EmojiMessage from './messages/EmojiMessage.vue'
 import TypingMessage from './messages/TypingMessage.vue'
 import SystemMessage from './messages/SystemMessage.vue'
+import ReplyMessage from './messages/ReplyMessage.vue'
 import chatIcon from './assets/chat-icon.svg'
 import store from './store/'
 
@@ -77,7 +82,8 @@ export default {
     FileMessage,
     EmojiMessage,
     TypingMessage,
-    SystemMessage
+    SystemMessage,
+    ReplyMessage
   },
   props: {
     message: {
@@ -105,7 +111,7 @@ export default {
       required: true
     },
     reply: {
-      type: Number,
+      type: Object,
       required: false
     }
   },
@@ -141,6 +147,7 @@ export default {
   margin: auto;
   padding-bottom: 10px;
   display: flex;
+  flex-direction: column;
   .sc-message--edited {
     opacity: 0.7;
     word-wrap: normal;

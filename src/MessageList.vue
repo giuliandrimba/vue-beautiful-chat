@@ -14,6 +14,7 @@
       :message-styling="messageStyling"
       :show-edition="showEdition"
       :show-deletion="showDeletion"
+      :reply="replyMessage(message.reply)"
       @remove="$emit('remove', message)"
     >
       <template v-slot:user-avatar="scopedProps">
@@ -115,6 +116,9 @@ export default {
       const scrollTop = this.$refs.scrollList.scrollTop
       const scrollable = scrollTop > this.$refs.scrollList.scrollHeight - 600
       return this.alwaysScrollToBottom || scrollable
+    },
+    replyMessage(id) {
+      return this.messages.find(m => m.id === id);
     },
     profile(author) {
       const profile = this.participants.find((profile) => profile.id === author)
