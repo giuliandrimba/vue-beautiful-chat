@@ -25,12 +25,10 @@ export default {
 }
 
 .sc-suggestions-element {
-  margin: 3px;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid;
-  border-radius: 15px;
-  font-size: 14px;
-  background: inherit;
-  cursor: pointer;
+  text-align: center;
+  padding: 17px 20px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
 </style>
