@@ -19,7 +19,6 @@
       :colors="colors"
       :always-scroll-to-bottom="alwaysScrollToBottom"
       :message-styling="messageStyling"
-      :disable-user-list-toggle="disableUserListToggle"
       @scrollToTop="$emit('scrollToTop')"
       @onType="$emit('onType')"
       @edit="$emit('edit', $event)"

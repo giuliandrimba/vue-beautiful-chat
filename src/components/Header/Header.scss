@@ -7,12 +7,23 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  z-index: 2;
 }
 
 .sc-header--img {
   border-radius: 50%;
   align-self: center;
   padding: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.sc-header--back {
+  border-radius: 50%;
+  align-self: center;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
 }
 
 .sc-header--title {

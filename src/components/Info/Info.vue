@@ -1,5 +1,5 @@
-<style src="./UserList.scss" scoped lang="scss"></style>
-<script src="./UserList.js"></script>
+<style src="./Info.scss" scoped lang="scss"></style>
+<script src="./Info.js"></script>
 
 <template>
   <div class="user-list" :style="{background: userListColor.userList.bg}">

@@ -1,23 +1,19 @@
 import Header from '../Header/Header.vue'
 import MessageList from '../MessageList/MessageList.vue'
 import UserInput from '../UserInput/UserInput.vue'
-import UserList from '../UserList/UserList.vue'
+import Info from '../Info/Info.vue'
 
 export default {
   components: {
     Header,
     MessageList,
     UserInput,
-    UserList
+    Info
   },
   props: {
     showEmoji: {
       type: Boolean,
       default: false
-    },
-    showCloseButton: {
-      type: Boolean,
-      default: true
     },
     showFile: {
       type: Boolean,
@@ -67,10 +63,6 @@ export default {
       type: Boolean,
       required: true
     },
-    disableUserListToggle: {
-      type: Boolean,
-      default: false
-    },
     showEdition: {
       type: Boolean,
       required: true
@@ -105,5 +97,8 @@ export default {
     onInfo() {
       this.showInfo = true;
     },
+    onClickBack() {
+      this.showInfo = false;
+    }
   }
 }

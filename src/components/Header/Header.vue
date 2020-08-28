@@ -4,11 +4,16 @@
 <template>
   <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
     <slot>
-      <img v-if="imageUrl" class="sc-header--img" :src="imageUrl" alt="" />
-      <div v-if="!disableUserListToggle" class="sc-header--title enabled">
-        {{ title }}
+      <div
+        v-if="isInfo"
+        class="sc-header--back"
+      >
+        <BackIcon
+          @click="onClickBack"
+        />
       </div>
-      <div v-else class="sc-header--title">{{ title }}</div>
+      <img v-if="imageUrl && !isInfo" class="sc-header--img" :src="imageUrl" alt="" />
+      <div class="sc-header--title">{{ title }}</div>
       <div class="sc-actions">
         <button
           class="sc-header--more"

@@ -51,10 +51,6 @@ export default {
       type: Boolean,
       default: true
     },
-    showCloseButton: {
-      type: Boolean,
-      default: true
-    },
     showHeader: {
       type: Boolean,
       default: true
@@ -113,8 +109,8 @@ export default {
       default: function () {
         return {
           header: {
-            bg: '#4e8cff',
-            text: '#ffffff'
+            bg: '#ffffff',
+            text: '#0a0a0a'
           },
           launcher: {
             bg: '#4e8cff'
@@ -145,10 +141,6 @@ export default {
       type: Boolean,
       default: () => false
     },
-    disableUserListToggle: {
-      type: Boolean,
-      default: false
-    }
   },
   computed: {
     chatWindowTitle() {

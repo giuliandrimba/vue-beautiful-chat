@@ -1,3 +1,16 @@
+:root {
+  --header-bg-color: #4e8cff;
+  --header-text-color: #ffffff;
+  --message-list-bg-color: #ffffff;
+  --message-list-bg-color: #ffffff;
+  --sent-message-bg-color: #4e8cff;
+  --sent-message-text-color: #ffffff;
+  --received-message-bg-color: #f4f7f9;
+  --received-message-text-color: #ffffff;
+  --user-input-bg-color: #f4f7f9;
+  --user-input-text-color: #565867;
+}
+
 .sc-new-messsages-count {
   position: absolute;
   top: -3px;

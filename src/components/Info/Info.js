@@ -19,5 +19,5 @@ export default {
       }
       return Object.assign(defaultColors, this.colors)
     }
-  }
+  },
 }

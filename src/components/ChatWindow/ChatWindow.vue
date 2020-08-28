@@ -5,18 +5,18 @@
   <div class="sc-chat-window" :class="{opened: true}">
     <Header
       v-if="showHeader"
-      :show-close-button="showCloseButton"
+      :isInfo="showInfo"
       :title="title"
       :image-url="titleImageUrl"
       :colors="colors"
-      :disable-user-list-toggle="disableUserListToggle"
       :actions="actions"
+      @back="onClickBack"
     >
       <template>
         <slot name="header"> </slot>
       </template>
     </Header>
-    <UserList v-if="showInfo" :colors="colors" :participants="participants" />
+    <Info v-if="showInfo" :colors="colors" :participants="participants" />
     <MessageList
       v-if="!showInfo"
       :messages="messages"

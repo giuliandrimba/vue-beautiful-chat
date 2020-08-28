@@ -1,8 +1,10 @@
 import Actions from '../Actions/Actions.vue';
+import BackIcon from '../../icons/BackIcon.vue';
 
 export default {
   components: {
     Actions,
+    BackIcon,
   },
   props: {
     imageUrl: {
@@ -20,10 +22,10 @@ export default {
       type: Object,
       required: true
     },
-    disableUserListToggle: {
+    isInfo: {
       type: Boolean,
       default: false
-    }
+    },
   },
   data() {
     return {
@@ -33,6 +35,9 @@ export default {
   methods: {
     toggleAction() {
       this.actionOpen = !this.actionOpen;
-    }
+    },
+    onClickBack() {
+      this.$emit("back");
+    },
   }
 }

@@ -7,7 +7,6 @@
     <beautiful-chat
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :close="closeChat"
-      :colors="colors"
       :isOpen="isChatOpen"
       :messageList="messageList"
       :messageStyling="messageStyling"
