@@ -10,8 +10,5 @@
       </div>
       <div v-else class="sc-header--title">{{ title }}</div>
     </slot>
-    <div v-if="showCloseButton" class="sc-header--close-button" @click="onClose">
-      <img :src="icons.close.img" :alt="icons.close.name" />
-    </div>
   </div>
 </template>

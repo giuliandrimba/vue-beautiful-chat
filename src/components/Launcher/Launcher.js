@@ -35,10 +35,6 @@ export default {
       type: Boolean,
       default: false
     },
-    isOpen: {
-      type: Boolean,
-      required: true
-    },
     open: {
       type: Function,
       required: true

@@ -32,10 +32,6 @@ export default {
     disableUserListToggle: {
       type: Boolean,
       default: false
-    },
-    showCloseButton: {
-      type: Boolean,
-      default: false
     }
   },
   data() {

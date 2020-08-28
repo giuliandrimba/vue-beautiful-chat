@@ -47,10 +47,6 @@ export default {
       type: Array,
       default: () => []
     },
-    isOpen: {
-      type: Boolean,
-      default: () => false
-    },
     placeholder: {
       type: String,
       default: 'Write a message...'

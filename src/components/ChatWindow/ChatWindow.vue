@@ -2,7 +2,7 @@
 <script src="./ChatWindow.js"></script>
 
 <template>
-  <div class="sc-chat-window" :class="{opened: isOpen, closed: !isOpen}">
+  <div class="sc-chat-window" :class="{opened: true}">
     <Header
       v-if="showHeader"
       :show-close-button="showCloseButton"
