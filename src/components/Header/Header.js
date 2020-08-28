@@ -1,18 +1,10 @@
-import CloseIcon from '../../assets/close-icon-big.png'
+import Actions from '../Actions/Actions.vue';
 
 export default {
+  components: {
+    Actions,
+  },
   props: {
-    icons: {
-      type: Object,
-      default: function () {
-        return {
-          close: {
-            img: CloseIcon,
-            name: 'default'
-          }
-        }
-      }
-    },
     imageUrl: {
       type: String,
       required: false
@@ -21,9 +13,8 @@ export default {
       type: String,
       required: false
     },
-    onClose: {
-      type: Function,
-      required: false
+    actions: {
+      type: Array,
     },
     colors: {
       type: Object,
@@ -36,13 +27,12 @@ export default {
   },
   data() {
     return {
-      inUserList: false
+      actionOpen: false
     }
   },
   methods: {
-    toggleUserList() {
-      this.inUserList = !this.inUserList
-      this.$emit('userList', this.inUserList)
+    toggleAction() {
+      this.actionOpen = !this.actionOpen;
     }
   }
 }

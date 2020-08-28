@@ -10,15 +10,15 @@
       :image-url="titleImageUrl"
       :colors="colors"
       :disable-user-list-toggle="disableUserListToggle"
-      @userList="handleUserListToggle"
+      :actions="actions"
     >
       <template>
         <slot name="header"> </slot>
       </template>
     </Header>
-    <UserList v-if="showUserList" :colors="colors" :participants="participants" />
+    <UserList v-if="showInfo" :colors="colors" :participants="participants" />
     <MessageList
-      v-if="!showUserList"
+      v-if="!showInfo"
       :messages="messages"
       :participants="participants"
       :show-typing-indicator="showTypingIndicator"
@@ -52,7 +52,7 @@
       </template>
     </MessageList>
     <UserInput
-      v-if="!showUserList"
+      v-if="!showInfo"
       :show-emoji="showEmoji"
       :on-submit="onUserInputSubmit"
       :suggestions="getSuggestions()"

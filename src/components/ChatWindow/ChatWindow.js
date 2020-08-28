@@ -82,7 +82,13 @@ export default {
   },
   data() {
     return {
-      showUserList: false
+      showInfo: false,
+      actions: [
+        {
+          label: "Info",
+          onClick: this.onInfo
+        }
+      ]
     }
   },
   computed: {
@@ -93,11 +99,11 @@ export default {
     }
   },
   methods: {
-    handleUserListToggle(showUserList) {
-      this.showUserList = showUserList
-    },
     getSuggestions() {
       return this.messages.length > 0 ? this.messages[this.messages.length - 1].suggestions : []
-    }
+    },
+    onInfo() {
+      this.showInfo = true;
+    },
   }
 }
