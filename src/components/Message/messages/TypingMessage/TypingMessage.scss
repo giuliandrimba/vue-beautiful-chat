@@ -1,32 +1,7 @@
-<template>
-  <div class="sc-typing-indicator">
-    {{ message.data.text }}
-  </div>
-</template>
-
-<script>
-import TextMessage from './TextMessage.vue';
-export default {
-  components: {
-    TextMessage,
-  },
-  props: {
-    message: {
-      type: Object,
-      required: true
-    }
-  }
-}
-</script>
-
-<style scoped>
 .sc-typing-indicator {
   text-align: center;
   padding: 17px 20px;
   border-radius: 6px;
-  display: inline-block;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
 }
 
 .sc-typing-indicator span {
@@ -60,4 +35,3 @@ export default {
     background-color: #b6b5ba;
   }
 }
-</style>

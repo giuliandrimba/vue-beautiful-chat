@@ -1,3 +1,6 @@
+<style src="./UserInputButton.scss" scoped lang="scss"></style>
+<script src="./UserInputButton.js"></script>
+
 <template>
   <button class="sc-user-input--button-icon-wrapper">
     <IconBase :color="color" width="20" height="20" :icon-name="tooltip">
@@ -5,34 +8,3 @@
     </IconBase>
   </button>
 </template>
-
-<script>
-import IconBase from '../../IconBase/IconBase.vue'
-
-export default {
-  components: {
-    IconBase
-  },
-  props: {
-    color: {
-      type: String,
-      required: true
-    },
-    tooltip: {
-      type: String,
-      default: ''
-    }
-  }
-}
-</script>
-
-<style scoped>
-.sc-user-input--button-icon-wrapper {
-  background: none;
-  border: none;
-  padding: 0px;
-  margin: 0px;
-  outline: none;
-  cursor: pointer;
-}
-</style>

@@ -1,27 +1,10 @@
-<template>
-  <div class="sc-typing-indicator" :style="messageColors">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</template>
-
-<script>
-export default {
-  props: {
-    messageColors: {
-      type: Object,
-      required: true
-    }
-  }
-}
-</script>
-
-<style scoped>
 .sc-typing-indicator {
   text-align: center;
   padding: 17px 20px;
   border-radius: 6px;
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
 
 .sc-typing-indicator span {
@@ -55,4 +38,3 @@ export default {
     background-color: #b6b5ba;
   }
 }
-</style>

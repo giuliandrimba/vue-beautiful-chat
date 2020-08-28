@@ -1,3 +1,6 @@
+<style src="./Suggestions.scss" scoped lang="scss"></style>
+<script src="./Suggestions.js"></script>
+
 <template>
   <div class="sc-suggestions-row" :style="{background: colors.messageList.bg}">
     <button
@@ -14,38 +17,3 @@
     </button>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    suggestions: {
-      type: Array,
-      default: () => []
-    },
-    colors: {
-      type: Object,
-      required: true
-    }
-  },
-  data() {
-    return {}
-  }
-}
-</script>
-
-<style>
-.sc-suggestions-row {
-  text-align: center;
-  background: inherit;
-}
-
-.sc-suggestions-element {
-  margin: 3px;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid;
-  border-radius: 15px;
-  font-size: 14px;
-  background: inherit;
-  cursor: pointer;
-}
-</style>
