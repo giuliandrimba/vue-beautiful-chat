@@ -50,6 +50,18 @@ export default {
   cursor: pointer;
 }
 
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
 .sc-user-input--file-icon-wrapper {
   background: none;
   border: none;

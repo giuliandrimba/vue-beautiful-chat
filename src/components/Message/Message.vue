@@ -1,4 +1,4 @@
-<style src="./Message.scss" scoped lang="scss"></style>
+<style src="./Message.scss" lang="scss"></style>
 <script src="./Message.js"></script>
 
 <template>
