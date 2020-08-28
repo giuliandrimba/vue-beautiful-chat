@@ -64,10 +64,10 @@
 </template>
 
 <script>
-import Header from './Header.vue'
-import MessageList from './MessageList.vue'
-import UserInput from './UserInput.vue'
-import UserList from './UserList.vue'
+import Header from '../Header/Header.vue'
+import MessageList from '../MessageList/MessageList.vue'
+import UserInput from '../UserInput/UserInput.vue'
+import UserList from '../UserList/UserList.vue'
 
 export default {
   components: {

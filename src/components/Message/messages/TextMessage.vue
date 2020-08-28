@@ -53,13 +53,13 @@
 </template>
 
 <script>
-import IconBase from './../components/IconBase.vue'
-import IconEdit from './../components/icons/IconEdit.vue'
-import IconCross from './../components/icons/IconCross.vue'
-import IconReply from './../components/icons/IconReply.vue'
+import IconBase from '../../IconBase/IconBase.vue'
+import IconEdit from '../../IconBase/icons/IconEdit.vue'
+import IconCross from '../../IconBase/icons/IconCross.vue'
+import IconReply from '../../IconBase/icons/IconReply.vue'
 import escapeGoat from 'escape-goat'
 import Autolinker from 'autolinker'
-import store from './../store/'
+import store from '../../../store/'
 const fmt = require('msgdown')
 
 export default {

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CloseIcon from './assets/close-icon-big.png'
+import CloseIcon from '../../assets/close-icon-big.png'
 
 export default {
   props: {

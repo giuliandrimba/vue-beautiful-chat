@@ -1,5 +1,5 @@
 <template>
-  <div class="sc-typing-indicator" :style="messageColors">
+  <div class="sc-typing-indicator">
     {{ message.data.text }}
   </div>
 </template>

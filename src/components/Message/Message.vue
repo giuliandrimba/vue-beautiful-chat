@@ -73,8 +73,8 @@ import EmojiMessage from './messages/EmojiMessage.vue'
 import TypingMessage from './messages/TypingMessage.vue'
 import SystemMessage from './messages/SystemMessage.vue'
 import ReplyMessage from './messages/ReplyMessage.vue'
-import chatIcon from './assets/chat-icon.svg'
-import store from './store/'
+import chatIcon from '../../assets/chat-icon.svg'
+import store from '../../store/'
 
 export default {
   components: {

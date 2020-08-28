@@ -67,10 +67,10 @@
 </template>
 
 <script>
-import ChatWindow from './ChatWindow.vue'
+import ChatWindow from '../ChatWindow/ChatWindow.vue'
 
-import CloseIcon from './assets/close-icon.png'
-import OpenIcon from './assets/logo-no-bg.svg'
+import CloseIcon from '../../assets/close-icon.png'
+import OpenIcon from '../../assets/logo-no-bg.svg'
 
 export default {
   components: {

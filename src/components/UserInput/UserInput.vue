@@ -84,17 +84,17 @@
 </template>
 
 <script>
-import EmojiIcon from './icons/EmojiIcon.vue'
-import FileIcons from './icons/FileIcons.vue'
-import UserInputButton from './UserInputButton.vue'
-import Suggestions from './Suggestions.vue'
-import ReplyMessage from './ReplyMessage.vue'
-import FileIcon from './assets/file.svg'
-import CloseIconSvg from './assets/close.svg'
-import store from './store/'
-import IconCross from './components/icons/IconCross.vue'
-import IconOk from './components/icons/IconOk.vue'
-import IconSend from './components/icons/IconSend.vue'
+import EmojiIcon from '../../icons/EmojiIcon.vue'
+import FileIcons from '../../icons/FileIcons.vue'
+import UserInputButton from './UserInputButton/UserInputButton.vue'
+import Suggestions from './Suggestions/Suggestions.vue'
+import ReplyMessage from './ReplyMessage/ReplyMessage.vue'
+import FileIcon from '../../assets/file.svg'
+import CloseIconSvg from '../../assets/close.svg'
+import store from '../../store/'
+import IconCross from '../IconBase/icons/IconCross.vue'
+import IconOk from '../IconBase/icons/IconOk.vue'
+import IconSend from '../IconBase/icons/IconSend.vue'
 
 export default {
   components: {

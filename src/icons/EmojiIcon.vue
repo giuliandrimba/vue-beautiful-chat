@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import EmojiPicker from './../EmojiPicker.vue'
+import EmojiPicker from '../components/EmojiPicker/EmojiPicker.vue'
 
 export default {
   components: {

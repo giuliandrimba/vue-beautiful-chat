@@ -51,8 +51,8 @@
 </template>
 
 <script>
-import Message from './Message.vue'
-import chatIcon from './assets/chat-icon.svg'
+import Message from '../Message/Message.vue'
+import chatIcon from '../../assets/chat-icon.svg'
 
 export default {
   components: {

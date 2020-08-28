@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import IconBase from './components/IconBase.vue'
+import IconBase from '../../IconBase/IconBase.vue'
 
 export default {
   components: {
