@@ -2,10 +2,10 @@
 <script src="./Actions.js"></script>
 
 <template>
-  <div class="sc-actions">
+  <div class="sc-actions" v-click-outside="onClickOutside">
     <button
       v-for="(action, i) in actions"
-      :key="`action=${i}`"
+      :key="`action-${i}`"
       @click.prevent="onClick(action)"
       class="sc-actions--action"
     >

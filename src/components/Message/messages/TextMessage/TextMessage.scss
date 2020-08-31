@@ -1,3 +1,26 @@
 a.chatLink {
   color: inherit !important;
 }
+
+.sc-message--more {
+  width: 10%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 0;
+  color: white;
+  top: 10px;
+}
+
+.sc-message--more:after {
+  content: '\2807';
+  font-size: 25px;
+}
+
+.sc-message--actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
