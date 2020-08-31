@@ -2,6 +2,7 @@ import Header from '../Header/Header.vue'
 import MessageList from '../MessageList/MessageList.vue'
 import UserInput from '../UserInput/UserInput.vue'
 import Info from '../Info/Info.vue'
+import store from '../../store/'
 
 export default {
   components: {
@@ -18,6 +19,10 @@ export default {
     showFile: {
       type: Boolean,
       default: false
+    },
+    sender: {
+      type: Object,
+      required: true,
     },
     showHeader: {
       type: Boolean,
@@ -83,12 +88,20 @@ export default {
       ]
     }
   },
+  created() {
+    store.sender = this.sender;
+  },
   computed: {
     messages() {
       let messages = this.messageList
 
       return messages
-    }
+    },
+    users() {
+      const users = [...this.participants]
+      users.push(store.sender);
+      return users;
+    },
   },
   methods: {
     getSuggestions() {

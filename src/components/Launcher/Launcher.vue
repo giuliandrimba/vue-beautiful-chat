@@ -5,6 +5,7 @@
   <div>
     <ChatWindow
       :message-list="messageList"
+      :sender="sender"
       :on-user-input-submit="onMessageWasSent"
       :participants="participants"
       :title="chatWindowTitle"

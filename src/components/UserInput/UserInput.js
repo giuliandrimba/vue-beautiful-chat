@@ -132,7 +132,7 @@ export default {
       })
     },
     _submitSuggestion(suggestion) {
-      this.onSubmit({ author: 'me', type: 'text', data: { text: suggestion }, reply: this.replyMessageId })
+      this.onSubmit({ author: store.sender.id, type: 'text', data: { text: suggestion }, reply: this.replyMessageId })
     },
     _checkSubmitSuccess(success) {
       if (Promise !== undefined) {
@@ -159,7 +159,7 @@ export default {
         if (text && text.length > 0) {
           this._checkSubmitSuccess(
             this.onSubmit({
-              author: 'me',
+              author: store.sender.id,
               type: 'text',
               data: { text },
               reply: this.replyMessageId
@@ -172,7 +172,7 @@ export default {
       if (text && text.length > 0) {
         this._checkSubmitSuccess(
           this.onSubmit({
-            author: 'me',
+            author: store.sender.id,
             type: 'file',
             data: { text, file },
             reply: this.replyMessageId
@@ -181,7 +181,7 @@ export default {
       } else {
         this._checkSubmitSuccess(
           this.onSubmit({
-            author: 'me',
+            author: store.sender.id,
             type: 'file',
             data: { file },
             reply: this.replyMessageId
@@ -193,7 +193,7 @@ export default {
       const text = this.$refs.userInput.textContent
       if (text && text.length) {
         this.$emit('edit', {
-          author: 'me',
+          author: store.sender.id,
           type: 'text',
           id: store.editMessage.id,
           data: { text },
@@ -205,7 +205,7 @@ export default {
     _handleEmojiPicked(emoji) {
       this._checkSubmitSuccess(
         this.onSubmit({
-          author: 'me',
+          author: store.sender.id,
           type: 'emoji',
           data: { emoji },
           reply: this.replyMessageId

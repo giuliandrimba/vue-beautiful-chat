@@ -1,11 +1,9 @@
 .sc-header {
-  min-height: 75px;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+  min-height: 50px;
   padding: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   box-sizing: border-box;
+  border-bottom: 1px solid #DADCE0;
   display: flex;
   z-index: 2;
 }
@@ -60,7 +58,7 @@
 
 .sc-header--more:after {
   content: '\2807';
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .sc-header--close-button img {

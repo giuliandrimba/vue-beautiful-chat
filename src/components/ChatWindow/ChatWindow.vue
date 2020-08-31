@@ -16,11 +16,11 @@
         <slot name="header"> </slot>
       </template>
     </Header>
-    <Info v-if="showInfo" :colors="colors" :participants="participants" />
+    <Info v-if="showInfo" :colors="colors" :participants="users" />
     <MessageList
       v-if="!showInfo"
       :messages="messages"
-      :participants="participants"
+      :participants="users"
       :show-typing-indicator="showTypingIndicator"
       :colors="colors"
       :always-scroll-to-bottom="alwaysScrollToBottom"

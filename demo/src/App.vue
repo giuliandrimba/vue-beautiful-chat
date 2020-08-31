@@ -21,6 +21,7 @@
       :showTypingIndicator="showTypingIndicator"
       :showEdition="true"
       :showDeletion="true"
+      :sender="sender"
       :titleImageUrl="titleImageUrl"
       @onType="handleOnType"
       @edit="editMessage"
@@ -137,7 +138,12 @@ export default {
       chosenColor: null,
       alwaysScrollToBottom: true,
       messageStyling: true,
-      userIsTyping: false
+      userIsTyping: false,
+      sender: {
+        id: 'giuliandrimba',
+        name: 'Giulian Drimba',
+        imageUrl: 'https://avatars3.githubusercontent.com/u/1915989?s=230&v=4'
+      }
     }
   },
   created() {
@@ -238,7 +244,7 @@ body {
 }
 
 * {
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 
 .demo-description {
@@ -260,7 +266,7 @@ body {
   margin: 0px;
   padding: 0px;
   resize: none;
-  font-family: Avenir Next, Helvetica Neue, Helvetica, sans-serif;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
   background: #fafbfc;
   color: #8da2b5;
   border: 1px solid #dde5ed;

@@ -46,6 +46,9 @@ export default {
       required: false
     }
   },
+  created() {
+    console.log('user', this.user);
+  },
   computed: {
     authorName() {
       return this.user && this.user.name
@@ -54,7 +57,7 @@ export default {
       return (this.user && this.user.imageUrl) || chatIcon
     },
     messageColors() {
-      return this.message.author === 'me' ? this.sentColorsStyle : this.receivedColorsStyle
+      return this.message.author === store.sender.id ? this.sentColorsStyle : this.receivedColorsStyle
     },
     receivedColorsStyle() {
       return {
@@ -67,6 +70,9 @@ export default {
         color: this.colors.sentMessage.text,
         backgroundColor: this.colors.sentMessage.bg
       }
+    },
+    senderId() {
+      return store.sender.id;
     }
   }
 }

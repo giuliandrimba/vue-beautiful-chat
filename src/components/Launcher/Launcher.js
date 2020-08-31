@@ -59,6 +59,10 @@ export default {
       type: Array,
       required: true
     },
+    sender: {
+      type: Object,
+      required: true
+    },
     title: {
       type: String,
       default: () => ''
