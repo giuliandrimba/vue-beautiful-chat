@@ -124,7 +124,7 @@ export default {
           },
           receivedMessage: {
             bg: '#f4f7f9',
-            text: '#ffffff'
+            text: '#282828'
           },
           userInput: {
             bg: '#f4f7f9',
