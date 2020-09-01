@@ -49,8 +49,7 @@
 }
 
 .sc-message--text {
-  padding: 5px 20px;
-  border-radius: 6px;
+  padding: 1px 15px;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
@@ -67,6 +66,8 @@
 .sc-message--message-wrapper {
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .sc-message--content.sent .sc-message--text {
   color: white;

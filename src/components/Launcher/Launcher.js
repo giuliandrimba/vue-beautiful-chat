@@ -123,8 +123,8 @@ export default {
             bg: '#ffffff'
           },
           sentMessage: {
-            bg: '#4e8cff',
-            text: '#ffffff'
+            bg: '#f4f7f9',
+            text: '#282828'
           },
           receivedMessage: {
             bg: '#f4f7f9',
