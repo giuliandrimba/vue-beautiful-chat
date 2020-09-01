@@ -3,6 +3,15 @@
 
 <template>
   <div class="sc-suggestions-row" >
+    <div class="sc-user-input--button">
+      <UserInputButton
+        :color="colors.userInput.text"
+        tooltip="cancel"
+        @click.native.prevent="cancelReply"
+      >
+        <IconCross />
+      </UserInputButton>
+    </div>
     <div
       class="sc-suggestions-element"
     >

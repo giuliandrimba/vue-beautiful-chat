@@ -6,6 +6,7 @@
     <ReplyMessage
       v-if="replyMessage"
       :message="replyMessage"
+      :colors="colors"
     />
     <Suggestions :suggestions="suggestions" :colors="colors" @sendSuggestion="_submitSuggestion" />
     <div

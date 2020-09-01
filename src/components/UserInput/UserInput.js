@@ -206,8 +206,8 @@ export default {
       this._checkSubmitSuccess(
         this.onSubmit({
           author: store.sender.id,
-          type: 'emoji',
-          data: { emoji },
+          type: 'text',
+          data: { text: emoji },
           reply: this.replyMessageId
         })
       )

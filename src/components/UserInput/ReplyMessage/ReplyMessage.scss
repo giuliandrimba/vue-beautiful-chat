@@ -10,3 +10,18 @@
   background: #ffffff;
   border: 1px solid #eeeeee;
 }
+
+.sc-user-input--button:first-of-type {
+  width: 40px;
+}
+
+.sc-user-input--button {
+  width: 30px;
+  height: 55px;
+  margin-left: 2px;
+  margin-right: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+}
