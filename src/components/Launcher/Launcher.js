@@ -126,6 +126,10 @@ export default {
             bg: '#f4f7f9',
             text: '#282828'
           },
+          replyMessage: {
+            bg: '#ffffff',
+            text: '#888888'
+          },
           receivedMessage: {
             bg: '#f4f7f9',
             text: '#282828'

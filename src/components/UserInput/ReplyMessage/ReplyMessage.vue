@@ -14,6 +14,10 @@
     </div>
     <div
       class="sc-suggestions-element"
+      :style="{
+        backgroundColor: `${colors.replyMessage.bg}`,
+        color: `${colors.replyMessage.text}`
+      }"
     >
       {{ message.data.text }}
     </div>

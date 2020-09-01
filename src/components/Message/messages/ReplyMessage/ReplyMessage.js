@@ -3,6 +3,10 @@ export default {
     message: {
       type: Object,
       required: true
-    }
+    },
+    colors: {
+      type: Object,
+      required: true
+    },
   }
 }

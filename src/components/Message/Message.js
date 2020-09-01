@@ -46,9 +46,6 @@ export default {
       required: false
     }
   },
-  created() {
-    console.log('user', this.user);
-  },
   computed: {
     authorName() {
       return this.user && this.user.name

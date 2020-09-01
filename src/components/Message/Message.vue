@@ -28,6 +28,7 @@
         <ReplyMessage
           v-if="reply"
           :message="reply"
+          :colors="colors.replyMessage"
         />
 
         <TextMessage
